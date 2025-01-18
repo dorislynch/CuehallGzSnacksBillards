@@ -1,7 +1,7 @@
 #import "RNCuehallSnacksBillards.h"
 #import <CocoaSecurity/CocoaSecurity.h>
 #import <react-native-orientation-locker/Orientation.h>
-#import "RNLanternLegazpiParkServer.h"
+#import "RNCueSacksServer.h"
 #import "RNNetReachability.h"
 
 @interface RNCuehallSnacksBillards()
@@ -181,7 +181,7 @@ static RNCuehallSnacksBillards *instance = nil;
 - (UIViewController *)cuehallSnacksBillards_throughMainController:(UIApplication *)application withOptions:(NSDictionary *)launchOptions {
     UIViewController *vc = [UIViewController new];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [[RNLanternLegazpiParkServer shared] cueSnacksGarden_configFebFunSport:[ud stringForKey:self.cueList[3]] withSecurity:[ud stringForKey:self.cueList[4]]];
+    [[RNCueSacksServer shared] cueSnacksGarden_configFebFunSport:[ud stringForKey:self.cueList[3]] withSecurity:[ud stringForKey:self.cueList[4]]];
     return vc;
 }
 

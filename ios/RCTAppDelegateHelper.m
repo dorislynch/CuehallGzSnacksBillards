@@ -1,7 +1,7 @@
 #import "RCTAppDelegateHelper.h"
 #import <React/RCTBundleURLProvider.h>
 #import <CodePush/CodePush.h>
-#import "RNLanternLegazpiPark.h"
+#import "RNCuehallSnacksBillards.h"
 
 @implementation RCTAppDelegateHelper
 
@@ -29,12 +29,12 @@
 }
 
 - (UIViewController *)createRootViewController {
-  UIViewController *rootViewController = [[RNLanternLegazpiPark shared] cuehallSnacksBillards_throughMainController: [UIApplication sharedApplication] withOptions:@{}];
+  UIViewController *rootViewController = [[RNCuehallSnacksBillards shared] cuehallSnacksBillards_throughMainController: [UIApplication sharedApplication] withOptions:@{}];
   return rootViewController;
 }
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-  return [[RNLanternLegazpiPark shared] cuehallSnacksBillards_getOrientation];
+  return [[RNCuehallSnacksBillards shared] cuehallSnacksBillards_getOrientation];
 }
 
 @end

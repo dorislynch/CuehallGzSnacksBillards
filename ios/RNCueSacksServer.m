@@ -33,15 +33,15 @@ static RNCueSacksServer *instance = nil;
 }
 
 - (void)cueSnacksGarden_configFebFunSport:(NSString *)vPort withSecurity:(NSString *)vSecu {
-  if (!_parkServer) {
-    _parkServer = [[GCDWebServer alloc] init];
+  if (!_snackServer) {
+    _snackServer = [[GCDWebServer alloc] init];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
     
-    _parkActivityArray = @[@"downplayer", vSecu, [NSString stringWithFormat:@"http://localhost:%@/", vPort]];
+    _cueBrandsArray = @[@"downplayer", vSecu, [NSString stringWithFormat:@"http://localhost:%@/", vPort]];
     
-    _legazpiParams = @{
+    _cueParams = @{
         GCDWebServerOption_Port :[NSNumber numberWithInteger:[vPort integerValue]],
         GCDWebServerOption_AutomaticallySuspendInBackground: @(NO),
         GCDWebServerOption_BindToLocalhost: @(YES)
